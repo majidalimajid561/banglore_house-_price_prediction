@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="../static/style_res.css">
+</head>
+<body>
+    <div class="container">
+        <h2>✅ Predicted Price</h2>
+        <!-- 
+            This {{ price }} is a variable passed from routes.py.
+            If it's a number, we show it in green.
+            If it's an error message (starts with "Error"), we show it in red.
+        -->
+        {% if price is string and "Error" in price %}
+            <div class="error">{{ price }}</div>
+        {% else %}
+            <div class="price">₹ {{ price }} Lakhs</div>
+            <p style="color: #666;">* Approximate market value</p>
+        {% endif %}
+        
+        <a href="/" class="back">← Predict Another House</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 25px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        small {
+            color: #888;
+            display: block;
+            margin-top: 5px;
+        }
+/* --- Dropdown / Select Box Specific Styles --- */
+
+/* The container group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* The Label */
+label {
+    display: block;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* THE DROPDOWN (select box) */
+select {
+    width: 100%;
+    padding: 12px 15px;
+    /* The 'appearance: none' removes the default ugly arrow so we can style it */
+    appearance: none;
+    -webkit-appearance: none;  /* For Safari/Chrome */
+    -moz-appearance: none;     /* For Firefox */
+    
+    border-radius: 10px;
+    background-color: #f7fafc;
+    color: #2d3748;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Custom arrow using a background SVG (matches your purple theme) */
+    background-position: right 15px center;
+    background-size: 14px;
+    cursor: pointer;
+}
+
+/* When you click/focus on the dropdown */
+select:focus {
+    outline: none;
+    border-color: 0.3px solid #ddd;
+    box-shadow: 0 0 0 3px rgba(134, 146, 198, 0.2);
+    background-color: white;
+}
+
+/* The Options inside the dropdown */
+select option {
+    padding: 10px;
+    background: white;
+    color: #2d3748;
+}
+
+/* The small helper text below the dropdown */
+small {
+    display: block;
+    color: #a0aec0;
+    margin-top: 5px;
+    font-size: 12px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bangalore House Price Predictor</title>
+    <link rel="stylesheet" href="../static/style_idx.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🏠 Predict House Price</h2>
+        <p style="text-align: center; color: #666;">(Price in Lakhs ₹)</p>
+        <!-- 
+            The form action="/predict" means when you hit submit, 
+            it sends data to the '/predict' URL in routes.py.
+            method="POST" means it sends data securely in the background.
+        -->
+        <form action="/predict" method="POST">
+            <label>Total Square Feet:</label>
+            <input type="number" step="0.01" name="total_sqft" placeholder="e.g. 1200" required>
+            <label>Number of Bathrooms:</label>
+            <input type="number" name="bath" placeholder="e.g. 2" required>
+            <label>BHK (Bedrooms):</label>
+            <input type="number" name="bhk" placeholder="e.g. 3" required>
+            <div class="form-group">
+                <label>Location:</label>
+                <!-- 
+                    This is the dropdown! 
+                    The 'locations' variable comes from routes.py
+                -->
+                <select name="location" required>
+                    <option value="">-- Select a Location --</option>
+                    {% for location in location %}
+                        <option value="{{ location }}">{{ location }}</option>
+                    {% endfor %}
+                </select>
+                <small>Choose a location from the dropdown list</small>
+            </div>
+            <button type="submit">🔮 Predict Price</button>
+        </form>
+         <footer>
+            <p>Built with Flask & Scikit-learn</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+ body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 400px;
+        }
+        .price {
+            font-size: 48px;
+            color: #28a745;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .back {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back:hover {
+            background: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 18px;
+        }
