@@ -11,21 +11,28 @@ import numpy as np
 # --- 1. GET THE FILE PATHS (CRITICAL FOR BEGINNERS) ---
 # When you run Flask, the "current working directory" might not be where this file is.
 # To be 100% safe, we use __file__ which is the absolute path to THIS file (utils.py).
-# 
+
+
 # Example path: C:/Users/You/house_price_predictor/app/utils.py
-# 
+
+
 # os.path.dirname(__file__) -> C:/Users/You/house_price_predictor/app
 # os.path.dirname(os.path.dirname(__file__)) -> C:/Users/You/house_price_predictor (The ROOT!)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
 # Now we join the root directory with the 'models' folder and the filenames.
+
 MODEL_PATH = os.path.join(BASE_DIR, 'models', 'random_f.pkl')
 print(f"Looking for model at: {MODEL_PATH}")
 LOCATIONS_PATH = os.path.join(BASE_DIR, 'models', 'valid_locations.pkl')
-  # This helps you debug if files are missing
+# This helps you debug if files are missing
 
 ## --- 2. LOAD THE MODEL AND FEATURES (Happens ONLY once when server starts) ---
+
+
 try:
     with open(MODEL_PATH, 'rb') as f:
         model = joblib.load(f)
@@ -34,8 +41,6 @@ except FileNotFoundError:
     print(f"❌ ERROR: Model not found at {MODEL_PATH}")
     print("   Make sure you saved 'best_model.pkl' in the 'models' folder.")
     model = None  # Set to None so we can check later
-
-
 
 try:
     with open(LOCATIONS_PATH, 'rb') as f:

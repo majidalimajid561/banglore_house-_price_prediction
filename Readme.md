@@ -2,7 +2,7 @@
 
 A Machine Learning web application that predicts house prices in Bangalore, India based on key features like total square footage, number of bedrooms (BHK), bathrooms, and location.
 
-## 🚀 Live Demo
+## Home Page
 
 <img src="image/house price.png" width="400" alt="Form Page"/>
 
@@ -38,4 +38,4 @@ house-price-predictor/
 
 3. pip install -r requirements.txt
 
-4. python run.py
+4. streamlit run.py
