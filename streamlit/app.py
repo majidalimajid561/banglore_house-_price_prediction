@@ -20,10 +20,12 @@ st.markdown("""
 st.divider()
 df=joblib.load('data/processed_df.csv')
 location=df['location_processed'].unique()
-sqft=st.number_input("total area square feet",min_value=270,max_value=20000)
+
+sqft=st.number_input("total area square feet",min_value=280,max_value=20000)
 bath=st.number_input("total number of bath",min_value=1,max_value=10)
 bhk=st.number_input("Number of Bhk",min_value=1,max_value=10)
 location=st.selectbox("Location",location)
+
 
 if st.button('Predict'):
     input_data=pd.DataFrame(
