@@ -5,12 +5,12 @@ import joblib
 import requests
 # ---------- Page config ----------
 st.set_page_config(
-    page_title="House Price Prredction",
+    page_title="House Price prediction",
     page_icon="🛖",
     layout="centered"
 )
 
-st.title("🛖House price predition")
+st.title("🛖House price prediction")
 st.markdown("""
     Enter  details below and find out how would be price of this house.
 """)
