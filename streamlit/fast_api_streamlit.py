@@ -37,7 +37,7 @@ if st.button("Predict_price"):
          response=requests.post(api,json=input_data)
          if response.status_code==200:
               result=response.json()
-              st.success(f"prediction is {result['Price']}")
+              st.success(f"prediction price is {result['Price']}")
          else:
               st.error(f"API error {response.status_code} - {response.content}")
     except Exception as e:
